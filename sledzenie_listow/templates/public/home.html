@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+
+  <h1>Witaj w aplikacji Śledzenie listów przewozowych</h1>
+
+  <p>To jest prosta aplikacja do przeszukiwania listow przewozowych, aby w sposób zbiorczy uzyskiwać informacje o stanie przesyłek.</p>
+  <p><a href="{{ url_for('public.search') }}" class="btn btn-primary btn-large">Wyszukaj &raquo;</a></p>
+</div><!-- /.jumbotron -->
+
+<div class="body-content">
+  <div class="row">
+    <div class="col-lg-4">
+      <h2><i class="fa fa-github"></i> Github</h2>
+      <p>Niniejsza aplikacja ma otwartoźródłowy i darmowy kod. Każdy może go wykorzystywać jak chce (licencja MIT).</p>
+      <p><a class="btn btn-default" href="http://github.com/ad-m/sledzenie_listow/">Github page &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <h2><i class="fa fa-usd"></i> Darmowa</h2>
+      <p>Korzystanie z tej aplikacji jest w pełni bezpłatne - nie pobieram i nie zamierzam pobierać za nią żadnych opłat.</p>
+      <p><a href="http://www.sqlalchemy.org/" class="btn btn-default" href="#">Official website &raquo;</a></p>
+   </div>
+    <div class="col-lg-4">
+      <h2><i class="fa fa-times"></i> Ograniczenia</h2>
+      <p>Nie istnieją konta użytkowników - każdy może wykorzystywać aplikacje w równym stopniu bez specjalnych ograniczeń.</p>
+    </div>
+  </div><!-- /.row -->
+</div>
+{% endblock %}
+

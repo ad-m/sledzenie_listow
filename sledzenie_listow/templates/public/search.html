@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-narrow">
+  <h1>Wyszukaj</h1>
+  <p>Wpisz w poniższe pole dane numer pierwszej z przesyłek i ostatniej. Automatycznie zostaną wykryte przesyłki wysłane "pomiędzy". Nie przejmuj się ostatnią cyfrą - zostanie automatycznie wygenerowana. </p>
+  <p>Możesz przeszukiwać jednorazowo do 30 przesyłek.</p>
+    <br/>
+    <form id="registerForm" class="form form-register" method="POST" action="" role="form">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{form.start.label}}
+                {{form.start(placeholder="Start number eg. 00559007734046803726", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.end.label}}
+                {{form.end(placeholder="End number eg. 00559007734046803818", class_="form-control")}}
+            </div>
+            <p><input class="btn btn-default btn-submit" type="submit" value="Wyszukaj"></p>
+    </form>
+<div id="resultset">
+{% for row in resultset %}
+<div class="well">
+<h1>{{row.no}} <small>{{loop.index}}</small></h1>
+<a href="http://emonitoring.poczta-polska.pl/?numer={{row.no}}"><i class="fa fa-globe"></i> Źródło</a>
+{{row.meta|safe}}
+{{row.history|safe}}
+</div>
+{% else %}
+<p>Brak wyników</p>
+{% endfor %}
+
+</div>
+</div>
+
+{% endblock %}
+
