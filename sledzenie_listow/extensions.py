@@ -3,9 +3,6 @@
 in app.py
 """
 
-from flask_bcrypt import Bcrypt
-bcrypt = Bcrypt()
-
 from flask_cache import Cache
 cache = Cache()
 

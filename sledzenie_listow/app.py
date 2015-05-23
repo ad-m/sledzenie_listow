@@ -5,7 +5,6 @@ from flask import Flask, render_template
 from sledzenie_listow.settings import ProdConfig
 from sledzenie_listow.assets import assets
 from sledzenie_listow.extensions import (
-    bcrypt,
     cache,
     debug_toolbar,
 )
@@ -28,7 +27,6 @@ def create_app(config_object=ProdConfig):
 
 def register_extensions(app):
     assets.init_app(app)
-    bcrypt.init_app(app)
     cache.init_app(app)
     debug_toolbar.init_app(app)
     return None
