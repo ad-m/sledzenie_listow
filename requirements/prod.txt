@@ -27,4 +27,4 @@ Flask-DebugToolbar==0.10.1
 
 # Misc
 requests==2.13.0
-beautifulsoup4==4.5.3
+beautifulsoup4==4.6.0
