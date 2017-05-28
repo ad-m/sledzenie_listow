@@ -26,5 +26,5 @@ Flask-Cache>=0.13.1
 Flask-DebugToolbar==0.10.1
 
 # Misc
-requests==2.16.3
+requests==2.16.4
 beautifulsoup4==4.6.0
